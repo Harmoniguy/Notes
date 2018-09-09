@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Basic CSS Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Notes.css" />
+    <script src="Notes.js"></script>
+</head>
+
+<body>
+    <article id="BasicCSS">
+        <h2 class=lesson>Basic CSS</h2>
+        <section class="sublesson" id="IntroductiontoBasicCSS">
+            <h3>Introduction to Basic CSS</h3>
+            <p>Cascading Style Sheets (CSS) tell the browser how to display the text and other content that you write
+                in HTML.</p>
+
+            <p>
+                Note that CSS is case-sensitive so be careful with your capitalization. CSS has been adopted by all
+                major browsers and allows you to control:
+                <ul>
+                    <li>color</li>
+                    <li>fonts</li>
+                    <li>positioning</li>
+                    <li>spacing</li>
+                    <li>sizing</li>
+                    <li>decorations</li>
+                    <li>transitions</li>
+                </ul>
+            </p>
+            <p>
+                There are three main ways to apply CSS styling. You can apply inline styles directly to HTML elements
+                with the <code>style</code> attribute. Alternatively, you can place CSS rules within <code>style</code>
+                tags in an HTML document.
+                Finally, you can write CSS rules in an external style sheet, then reference that file in the HTML
+                document. Even
+                though the first two options have their use cases, most developers prefer external style sheets because
+                they keep the styles separate from the HTML elements. This improves the readability and reusability of
+                your code. The idea behind CSS is that you can use a selector to target an HTML element in the DOM
+                (Document
+                Object Model) and then apply a variety of attributes to that element to change the way it is displayed
+                on the page.
+            </p>
+            <p>
+                In this section, you'll see how adding CSS styles to the elements of your CatPhotoApp can change it
+                from
+                simple text to something more.
+            </p>
+        </section>
+        <section class="sublesson" id="ChangetheColorofText">
+            <h3>Change the Color of Text</h3>
+            <p>Now let's change the color of some of our text.</p>
+
+            <p>We can do this by changing the <code>style</code> of your <code>h2</code> element.</p>
+
+            <p>The property that is responsible for the color of an element's text is the <code>color</code> style
+                property.</p>
+
+            <p>
+                Here's how you would set your <code>h2</code> element's text color to blue:<br>
+                <code>
+                    &lt;h2 style=<q>color: blue;</q>&gt;CatPhotoApp&lt;/h2&gt;
+                </code>
+            </p>
+
+            <p>Note that it is a good practice to end inline <code>style</code> declarations with a <code>;</code> .</p>
+        </section>
+        <section class="sublesson" id="UseaCSSSelectorstoStyleElements">
+            <h3>Use a CSS Selectors to Style Elements</h3>
+            <p>
+                With CSS, there are hundreds of CSS <code>properties</code> that you can use to change the way an
+                element looks on
+                your page.
+            </p>
+
+            <p>
+                When you entered <code>&lt;h2 style=<q>color: red</q>&gt;CatPhotoApp&lt;/h2&gt;</code>, you were
+                styling that individual <code>h2</code> element with <code>inline CSS</code>, which stands for <code>Cascading
+                    Style Sheets</code>.
+            </p>
+
+            <p>That's one way to specify the style of an element, but there's a better way to apply <code>CSS</code>.</p>
+
+            <p>
+                At the top of your code, create a <code>style</code> block like this:<br>
+                <code>
+                    &lt;style&gt;<br>
+                    &lt;/style&gt;
+                </code>
+            </p>
+            <p>
+                Inside that style block, you can create a <code>CSS selector</code> for all <code>h2</code> elements.
+                For example, if you wanted
+                all <code>h2</code> elements to be red, you would add a style rule that looks like this:<br>
+                <code>
+                    &lt;style&gt;<br>
+                    &emsp;&emsp;h2 {color: red;}<br>
+                    &lt;/style&gt;
+                </code>
+            </p>
+            <p>
+                Note that it's important to have both opening and closing curly braces (<code>{</code> and <code>}</code>)
+                around each element's
+                style rule(s). You also need to make sure that your element's style definition is between the opening
+                and closing style tags. Finally, be sure to add a semicolon to the end of each of your element's style
+                rules.
+            </p>
+        </section>
+        <section class="sublesson" id="UseaCSSClasstoStyleanElement">
+            <h3>Use a CSS Class to Style an Element</h3>
+            <p>Classes are reusable styles that can be added to HTML elements.</p>
+            <p>
+                Here's an example CSS class declaration:<br>
+                <code>
+                    &lt;style&gt;<br>
+                    &emsp;&emsp;.blue-text {<br>
+                    &emsp;&emsp;&emsp;&emsp;color: blue;<br>
+                    &emsp;&emsp;}<br>
+                    &lt;/style&gt;
+                </code>
+            </p>
+            <p>
+                You can see that we've created a CSS class called <code>blue-text</code> within the <code>&lt;style&gt;</code>
+                tag.
+            </p>
+
+            <p>
+                You can apply a class to an HTML element like this:<br>
+                <code>
+                    &lt;h2 class="blue-text"&gt;CatPhotoApp&lt;/h2&gt;
+                </code>
+            </p>
+            <p>
+                Note that in your CSS <code>style</code> element, class names start with a period. In your HTML
+                elements' class attribute, the class name does not include the period.
+            </p>
+        </section>
+        <section class="sublesson" id="ChangetheFontSizeofanElement">
+            <h3>Change the Font Size of an Element</h3>
+            <p>
+                Font size is controlled by the font-size CSS property, like this:<br>
+                <code>
+                    h1 {<br>
+                    &emsp;&emsp;font-size: 30px;<br>
+                    }
+                </code>
+            </p>
+        </section>
+        <section class="sublesson" id="SettheFontFamilyofanElement">
+            <h3>Set the Font Family of an Element</h3>
+            <p>
+                You can set which font an element should use, by using the font-family property.
+
+                For example, if you wanted to set your h2 element's font to sans-serif, you would use the following
+                CSS:<br>
+                <code>
+                    h2 {<br>
+                    &emsp;&emsp;font-family: sans-serif;<br>
+                    }
+                </code>
+            </p>
+        </section>
+        <section class="sublesson" id="ImportaGoogleFont">
+            <h3>Import a Google Font</h3>
+            <p>
+                In addition to specifying common fonts that are found on most operating systems, we can also specify
+                non-standard, custom web fonts for use on our website. There are various sources for web fonts on the
+                internet but, for this example we will focus on the Google Fonts library.
+            </p>
+
+            <p>Google Fonts is a free library of web fonts that you can use in your CSS by referencing the font's URL.</p>
+
+            <p>
+                So, let's go ahead and import and apply a Google font (note that if Google is blocked in your country,
+                you will need to skip this challenge).
+            </p>
+
+            <p>
+                To import a Google Font, you can copy the font(s) URL from the Google Fonts library and then paste it
+                in
+                your HTML. For this challenge, we'll import the <code>Lobster</code> font. To do this, copy the
+                following code
+                snippet and paste it into the top of your code editor(before the opening <code>style</code> element):<br>
+                <code>
+                    &lt;link href=<q>https://fonts.googleapis.com/css?family=Lobster</q> rel=<q>stylesheet</q> type=<q>text/css</q>&gt;
+                </code>
+            </p>
+
+            <p>
+                Now you can use the <code>Lobster</code> font in your CSS by using <code>Lobster</code> as the
+                FAMILY_NAME as in the following
+                example:<br>
+                <code>font-family: FAMILY_NAME, GENERIC_NAME;</code>.
+            </p>
+
+            <p>
+                The GENERIC_NAME is optional, and is a fallback font in case the other specified font is not available.
+                This is covered in the next challenge.
+            </p>
+
+            <p>
+                Family names are case-sensitive and need to be wrapped in quotes if there is a space in the name. For
+                example, you need quotes to use the "Open Sans" font, but not to use the Lobster font.
+            </p>
+        </section>
+        <section class="sublesson" id="SpecifyHowFontsShouldDegrade">
+            <h3>Specify How Fonts Should Degrade</h3>
+            <p>
+                There are several default fonts that are available in all browsers. These generic font families include
+                <code>monospace</code>, <code>serif</code> and <code>sans-serif</code>.
+            </p>
+
+            <p>When one font isn't available, you can tell the browser to "degrade" to another font.</p>
+
+            <p>
+                For example, if you wanted an element to use the <code>Helvetica</code> font, but degrade to the <code>sans-serif</code>
+                font when
+                <code>Helvetica</code> wasn't available, you will specify it as follows:<br>
+                <code>
+                    p {<br>
+                    &emsp;&emsp;font-family: Helvetica, sans-serif;<br>
+                    }
+                </code>
+            </p>
+            <p>
+                Generic font family names are not case-sensitive. Also, they do not need quotes because they are CSS
+                keywords.
+            </p>
+        </section>
+        <section class="sublesson" id="SizeYourImages">
+            <h3>Size Your Images</h3>
+            <p>
+                CSS has a property called width that controls an element's <code>width</code>. Just like with fonts,
+                we'll use <code>px</code> (pixels) to specify the image's width.
+            </p>
+
+            <p>
+                For example, if we wanted to create a CSS class called <code>larger-image</code> that gave HTML
+                elements a width of 500 pixels, we'd use:<br>
+                <code>
+                    &lt;style&gt;<br>
+                    &emsp;&emsp;.larger-image {<br>
+                    &emsp;&emsp;&emsp;&emsp;width: 500px;<br>
+                    &emsp;&emsp;}<br>
+                    &lt;/style&gt;
+                </code>
+            </p>
+        </section>
+        <section class="sublesson" id="AddBordersAroundYourElements">
+            <h3>Add Borders Around Your Elements</h3>
+            <p>CSS borders have properties like style, color and width</p>
+
+            <p>
+                For example, if we wanted to create a red, 5 pixel border around an HTML element, we could use this
+                class:<br>
+                <code>
+                    &lt;style&gt;<br>
+                    &emsp;&emsp;.thin-red-border {<br>
+                    &emsp;&emsp;&emsp;&emsp;border-color: red;<br>
+                    &emsp;&emsp;&emsp;&emsp;border-width: 5px;<br>
+                    &emsp;&emsp;&emsp;&emsp;border-style: solid;<br>
+                    &emsp;&emsp;}<br>
+                    &lt;/style&gt;
+                </code>
+            </p>
+        </section>
+        <section class="sublesson" id="AddRoundedCornerswithborder-radius">
+            <h3>Add Rounded Corners with border-radius</h3>
+            <p>We can round out those corners with a CSS property called <code>border-radius</code>.</p>
+        </section>
+        <section class="sublesson" id="MakeCircularImageswithaborder-radius">
+            <h3>Make Circular Images with a border-radius</h3>
+            <p>In addition to pixels, you can also specify the <code>border-radius</code> using a percentage.</p>
+        </section>
+        <section class="sublesson" id="GiveaBackgroundColortoadivElement">
+            <h3>Give a Background Color to a div Element</h3>
+            <p>You can set an element's background color with the <code>background-color</code> property.</p>
+            <p>
+                For example, if you wanted an element's background color to be <code>green</code>, you'd put this
+                within your <code>style</code> element:<br>
+                <code>
+                    .green-background {<br>
+                    &emsp;&emsp;background-color: green;<br>
+                    }
+                </code>
+            </p>
+        </section>
+        <section class="sublesson" id="SettheidofanElement">
+            <h3>Set the id of an Element</h3>
+            <p>In addition to classes, each HTML element can also have an <code>id</code> attribute.</p>
+            <p>
+                There are several benefits to using <code>id</code> attributes: You can use an <code>id</code> to style
+                a single element and later you'll learn that you can use them to select and modify specific elements
+                with JavaScript.
+            </p>
+            <p>
+                <code>id</code> attributes should be unique. Browsers won't enforce this, but it is a widely agreed
+                upon best practice. So please don't give more than one element the same <code>id</code> attribute.
+            </p>
+            <p>
+                Here's an example of how you give your <code>h2</code> element the id of <code>cat-photo-app</code>:<br>
+                <code>
+                    &lt;h2 id=<q>cat-photo-app</q>&gt;
+                </code>
+            </p>
+        </section>
+        <section class="sublesson" id="UseanidAttributetoStyleanElement">
+            <h3>Use an id Attribute to Style an Element</h3>
+            <p> One cool thing about <code>id</code> attributes is that, like classes, you can style them using CSS.</p>
+
+            <p>However, an <code>id</code> is not reusable and should only be applied to one element. An <code>id</code>
+                also has a higher
+                specificity (importance) than a class so if both are applied to the same element and have conflicting
+                styles, the styles of the <code>id</code> will be applied.</p>
+
+            <p>Here's an example of how you can take your element with the <code>id</code> attribute of <code>cat-photo-element</code>
+                and give
+                it the background color of green. In your <code>style</code> element:<br>
+                <code>
+                    #cat-photo-element {<br>
+                    &emsp;&emsp;background-color: green;<br>
+                    }
+                </code>
+            </p>
+            <p>
+                Note that inside your <code>style</code> element, you always reference classes by putting a <code>.</code>
+                in front of their names. You always reference ids by putting a <code>#</code> in front of their names.
+            </p>
+        </section>
+        <section class="sublesson" id="AdjustthePaddingofanElement">
+            <h3>Adjust the Padding of an Element</h3>
+            <p>Now let's put our Cat Photo App away for a little while and learn more about styling HTML.</p>
+
+            <p>You may have already noticed this, but all HTML elements are essentially little rectangles.</p>
+
+            <p>Three important properties control the space that surrounds each HTML element: <code>padding</code>,
+                <code>margin</code>, and <code>border</code>.</p>
+
+            <p>An element's <code>padding</code> controls the amount of space between the element's content and its
+                <code>border</code>.</p>
+
+            <p>Here, we can see that the blue box and the red box are nested within the yellow box. Note that the red
+                box has more <code>padding</code> than the blue box.</p>
+
+            <p>When you increase the blue box's <code>padding</code>, it will increase the distance(<code>padding</code>)
+                between the text and the border around it.</p>
+        </section>
+        <section class="sublesson" id="AdjusttheMarginofanElement">
+            <h3>Adjust the Margin of an Element</h3>
+            <p>
+                An element's <code>margin</code> controls the amount of space between an element's <code>border</code>
+                and surrounding elements.
+            </p>
+
+            <p>
+                Here, we can see that the blue box and the red box are nested within the yellow box. Note that the red
+                box has a bigger <code>margin</code> than the blue box, making it appear smaller.
+            </p>
+
+            <p>
+                When you increase the blue box's <code>margin</code>, it will increase the distance between its border
+                and surrounding elements.
+            </p>
+        </section>
+        <section class="sublesson" id="AddaNegativeMargintoanElement">
+            <h3>Add a Negative Margin to an Element</h3>
+            <p>
+                An element's <code>margin</code> controls the amount of space between an element's <code>border</code>
+                and surrounding elements.
+            </p>
+            <p>
+                If you set an element's <code>margin</code> to a negative value, the element will grow larger.
+            </p>
+        </section>
+        <section class="sublesson" id="AddDifferentPaddingtoEachSideofanElement">
+            <h3>Add Different Padding to Each Side of an Element</h3>
+        </section>
+        <section class="sublesson" id="AddDifferentMarginstoEachSideofanElement">
+            <h3>Add Different Margins to Each Side of an Element</h3>
+        </section>
+        <section class="sublesson" id="UseClockwiseNotationtoSpecifythePaddingofanElement">
+            <h3>Use Clockwise Notation to Specify the Padding of an Element</h3>
+        </section>
+        <section class="sublesson" id="UseClockwiseNotationtoSpecifytheMarginofanElement">
+            <h3>Use Clockwise Notation to Specify the Margin of an Element</h3>
+        </section>
+        <section class="sublesson" id="UseAttributeSelectorstoStyleElements">
+            <h3>Use Attribute Selectors to Style Elements</h3>
+        </section>
+        <section class="sublesson" id="UnderstandAbsoluteversusRelativeUnits">
+            <h3>Understand Absolute versus Relative Units</h3>
+        </section>
+        <section class="sublesson" id="StyletheHTMLBodyElement">
+            <h3>Style the HTML Body Element</h3>
+        </section>
+        <section class="sublesson" id="InheritStylesfromtheBodyElement">
+            <h3>Inherit Styles from the Body Element</h3>
+        </section>
+        <section class="sublesson" id="PrioritizeOneStyleOverAnother">
+            <h3>Prioritize One Style Over Another</h3>
+        </section>
+        <section class="sublesson" id="OverrideStylesinSubsequentCSS">
+            <h3>Override Styles in Subsequent CSS</h3>
+        </section>
+        <section class="sublesson" id="OverrideClassDeclarationsbyStylingIDAttributes">
+            <h3>Override Class Declarations by Styling ID Attributes</h3>
+        </section>
+        <section class="sublesson" id="OverrideClassDeclarationswithInlineStyles">
+            <h3>Override Class Declarations with Inline Styles</h3>
+        </section>
+        <section class="sublesson" id="OverrideAllOtherStylesbyusingImportant">
+            <h3>Override All Other Styles by using Important</h3>
+        </section>
+        <section class="sublesson" id="UseHexCodeforSpecificColors">
+            <h3>Use Hex Code for Specific Colors</h3>
+        </section>
+        <section class="sublesson" id="UseHexCodetoMixColors">
+            <h3>Use Hex Code to Mix Colors</h3>
+        </section>
+        <section class="sublesson" id="UseAbbreviatedHexCode">
+            <h3>Use Abbreviated Hex Code</h3>
+        </section>
+        <section class="sublesson" id="UseRGBvaluestoColorElements">
+            <h3>Use RGB values to Color Elements</h3>
+        </section>
+        <section class="sublesson" id="UseRGBtoMixColors">
+            <h3>Use RGB to Mix Colors</h3>
+        </section>
+        <section class="sublesson" id="UseCSSVariablestochangeseveralelementsatonce">
+            <h3>Use CSS Variables to change several elements at once</h3>
+        </section>
+        <section class="sublesson" id="CreateacustomCSSVariable">
+            <h3>Create a custom CSS Variable</h3>
+        </section>
+        <section class="sublesson" id="UseacustomCSSVariable">
+            <h3>Use a custom CSS Variable</h3>
+        </section>
+        <section class="sublesson" id="AttachaFallbackvaluetoaCSSVariable">
+            <h3>Attach a Fallback value to a CSS Variable</h3>
+        </section>
+        <section class="sublesson" id="CascadingCSSvariables">
+            <h3>Cascading CSS variables</h3>
+        </section>
+        <section class="sublesson" id="Changeavariableforaspecificarea">
+            <h3>Change a variable for a specific area</h3>
+        </section>
+        <section class="sublesson" id="Useamediaquerytochangeavariable">
+            <h3>Use a media query to change a variable</h3>
+        </section>
+
+    </article>
+</body>
+
+</html>

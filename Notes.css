@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+body{
+    font-family: "Quattrocento Sans";
+}
+code{
+    color: darkred;
+    background-color: lightgray;
+    padding: 2px;
+}
+.sublesson{
+    border-color: black;
+    border-width: 1.5px;
+    border-style: solid;
+}
+h3{
+    font-family: "Karla";
+}
