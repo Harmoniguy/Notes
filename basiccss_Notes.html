@@ -377,78 +377,327 @@
         </section>
         <section class="sublesson" id="AddDifferentPaddingtoEachSideofanElement">
             <h3>Add Different Padding to Each Side of an Element</h3>
+            <p>Sometimes you will want to customize an element so that it has different amounts of <code>padding</code>
+                on each of its sides.</p>
+
+            <p>CSS allows you to control the <code>padding</code> of all four individual sides of an element with the
+                <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, and <code>padding-left</code>
+                properties.</p>
         </section>
         <section class="sublesson" id="AddDifferentMarginstoEachSideofanElement">
             <h3>Add Different Margins to Each Side of an Element</h3>
+            <p>Sometimes you will want to customize an element so that it has a different <code>margin</code> on each
+                of its sides.</p>
+
+            <p>CSS allows you to control the <code>margin</code> of all four individual sides of an element with the
+                <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, and <code>margin-left</code>
+                properties.</p>
         </section>
         <section class="sublesson" id="UseClockwiseNotationtoSpecifythePaddingofanElement">
             <h3>Use Clockwise Notation to Specify the Padding of an Element</h3>
+            <p>
+                Instead of specifying an element's <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>,
+                and <code>padding-left</code> properties individually, you can specify them all in one line, like
+                this:<br>
+                <code>
+                    padding: 10px 20px 10px 20px;
+                </code>
+            </p>
+            <p>
+                These four values work like a clock: top, right, bottom, left, and will produce the exact same result
+                as using the side-specific padding instructions.</p>
         </section>
         <section class="sublesson" id="UseClockwiseNotationtoSpecifytheMarginofanElement">
             <h3>Use Clockwise Notation to Specify the Margin of an Element</h3>
+            <p>
+                Instead of specifying an element's <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>,
+                and <code>margin-left</code> properties individually, you can specify them all in one line, like this:<br>
+                <code>
+                    margin: 10px 20px 10px 20px;
+                </code>
+            </p>
+            <p>
+                These four values work like a clock: top, right, bottom, left, and will produce the exact same result
+                as using the side-specific margin instructions.
+            </p>
         </section>
         <section class="sublesson" id="UseAttributeSelectorstoStyleElements">
             <h3>Use Attribute Selectors to Style Elements</h3>
+            <p>
+                You have been giving <code>id</code> or <code>class</code> attributes to elements that you wish to
+                specifically style. These are known as ID and class selectors. There are other CSS Selectors you can
+                use to select custom groups of elements to style.
+            </p>
+
+            <p>
+                You will use the <code>[attr=value]</code> attribute selector to style the checkboxes in CatPhotoApp.
+                This selector matches and styles elements with a specific attribute value. For example, the below code
+                changes the margins of all elements with the attribute <code>type</code> and a corresponding value of
+                <code>radio</code>:<br>
+                <code>
+                    [type='radio'] {<br>
+                    &emsp;&emsp;margin: 20px 0px 20px 0px;<br>
+                    }
+                </code>
+            </p>
         </section>
         <section class="sublesson" id="UnderstandAbsoluteversusRelativeUnits">
             <h3>Understand Absolute versus Relative Units</h3>
+            <p>The last several challenges all set an element's margin or padding with pixels (<code>px</code>). Pixels
+                are a type of length unit, which is what tells the browser how to size or space an item. In addition to
+                px, CSS has a number of different length unit options that you can use.
+            </p>
+
+            <p>The two main types of length units are absolute and relative. Absolute units tie to physical units of
+                length. For example, <code>in</code> and <code>mm</code> refer to inches and millimeters, respectively.
+                Absolute length units approximate the actual measurement on a screen, but there are some differences
+                depending on a screen's resolution.
+            </p>
+
+            <p>Relative units, such as <code>em</code> or <code>rem</code>, are relative to another length value. For
+                example, <code>em</code> is based on the size of an element's font. If you use it to set the <code>font-size</code>
+                property itself, it's relative to the parent's <code>font-size</code>.
+            </p>
+
+            <p>
+                <strong>Note</strong><br>
+                There are several relative unit options that are tied to the size of the viewport. They are covered in
+                the Responsive Web Design Principles section.
+            </p>
         </section>
         <section class="sublesson" id="StyletheHTMLBodyElement">
             <h3>Style the HTML Body Element</h3>
+            <p>Every HTML page has a <code>body</code> element.</p>
         </section>
         <section class="sublesson" id="InheritStylesfromtheBodyElement">
             <h3>Inherit Styles from the Body Element</h3>
-        </section>
-        <section class="sublesson" id="PrioritizeOneStyleOverAnother">
-            <h3>Prioritize One Style Over Another</h3>
+            <p>
+                Now we've proven that every HTML page has a <code>body</code> element, and that its <code>body</code>
+                element can also be styled with CSS.
+            </p>
+
+            <p>
+                Remember, you can style your <code>body</code> element just like any other HTML element, and all your
+                other elements will inherit your <code>body</code> element's styles.
+            </p>
         </section>
         <section class="sublesson" id="OverrideStylesinSubsequentCSS">
             <h3>Override Styles in Subsequent CSS</h3>
+            <p>Sometimes your HTML elements will receive multiple styles that conflict with one another.</p>
+
+            <p>For example, your <code>h1</code> element can't be both green and pink at the same time.</p>
+
+            <p>
+                Let's see what happens when we create a class that makes text pink, then apply it to an element. Will
+                our class override the <code>body</code> element's color: <code>green;</code> CSS property?
+            </p>
+            <p>The "pink-text" class overrode our <code>body</code> element's CSS declaration!</p>
+
+            <p>
+                We just proved that our classes will override the <code>body</code> element's CSS. So the next logical
+                question is, what can we do to override our <code>pink-text</code> class?
+            </p>
         </section>
         <section class="sublesson" id="OverrideClassDeclarationsbyStylingIDAttributes">
             <h3>Override Class Declarations by Styling ID Attributes</h3>
+            <p>We just proved that browsers read CSS from top to bottom. That means that, in the event of a conflict,
+                the browser will use whichever CSS declaration came last.</p>
+
+            <p>But we're not done yet. There are other ways that you can override CSS. Do you remember id attributes?</p>
+
+            <p>Let's override your <code>pink-text</code> and <code>blue-text</code> classes, and make your <code>h1</code>
+                element orange, by giving the <code>h1</code> element an id and then styling that id.</p>
         </section>
         <section class="sublesson" id="OverrideClassDeclarationswithInlineStyles">
             <h3>Override Class Declarations with Inline Styles</h3>
+            <p>So we've proven that id declarations override class declarations, regardless of where they are declared
+                in your <code>style</code> element CSS.</p>
+
+            <p>There are other ways that you can override CSS. Do you remember inline styles?</p>
         </section>
         <section class="sublesson" id="OverrideAllOtherStylesbyusingImportant">
             <h3>Override All Other Styles by using Important</h3>
+            <p>Yay! We just proved that inline styles will override all the CSS declarations in your <code>style</code>
+                element.</p>
+
+            <p>But wait. There's one last way to override CSS. This is the most powerful method of all. But before we
+                do it, let's talk about why you would ever want to override CSS.</p>
+
+            <p>In many situations, you will use CSS libraries. These may accidentally override your own CSS. So when
+                you absolutely need to be sure that an element has specific CSS, you can use <code>!important</code></p>
+
+            <p>Let's go all the way back to our <code>pink-text</code> class declaration. Remember that our <code>pink-text</code>
+                class was overridden by subsequent class declarations, id declarations, and inline styles.</p>
         </section>
         <section class="sublesson" id="UseHexCodeforSpecificColors">
             <h3>Use Hex Code for Specific Colors</h3>
+            <p>
+                Did you know there are other ways to represent colors in CSS? One of these ways is called hexadecimal
+                code, or <code>hex code</code> for short.
+            </p>
+
+            <p>
+                We usually use <code>decimals</code>, or base 10 numbers, which use the symbols 0 to 9 for each digit.
+                <code>Hexadecimals</code> (or <code>hex</code>) are base 16 numbers. This means it uses sixteen
+                distinct symbols. Like decimals, the symbols 0-9 represent the values zero to nine. Then A,B,C,D,E,F
+                represent the values ten to fifteen. Altogether, 0 to F can represent a digit in hexadecimal, giving us
+                16 total possible values. You can find more information about <code>hexadecimal</code> numbers here.
+            </p>
+
+            <p>
+                In CSS, we can use 6 hexadecimal digits to represent colors, two each for the red (R), green (G), and
+                blue (B) components. For example, <code>#000000</code> is black and is also the lowest possible value.
+                You can find more information about the RGB color system here.<br>
+                <code>
+                    body {<br>
+                    &emsp;&emsp;color: #000000;<br>
+                    }
+                </code>
+            </p>
         </section>
         <section class="sublesson" id="UseHexCodetoMixColors">
             <h3>Use Hex Code to Mix Colors</h3>
+            <p>
+                To review, hex codes use 6 hexadecimal digits to represent colors, two each for red (R), green (G), and
+                blue (B) components.
+            </p>
+
+            <p>
+                From these three pure colors (red, green, and blue), we can vary the amounts of each to create over 16
+                million other colors!
+            </p>
+
+            <p>
+                For example, orange is pure red, mixed with some green, and no blue. In hex code, this translates to
+                being <code>#FFA500</code>.
+            </p>
+
+            <p>The digit <code>0</code> is the lowest number in hex code, and represents a complete absence of color.</p>
+
+            <p>
+                The digit <code>F</code> is the highest number in hex code, and represents the maximum possible
+                brightness.
+            </p>
         </section>
         <section class="sublesson" id="UseAbbreviatedHexCode">
             <h3>Use Abbreviated Hex Code</h3>
+            <p>Many people feel overwhelmed by the possibilities of more than 16 million colors. And it's difficult to
+                remember hex code. Fortunately, you can shorten it.</p>
+
+            <p>For example, red's hex code <code>#FF0000</code> can be shortened to <code>#F00</code>. This shortened
+                form gives one digit for red, one digit for green, and one digit for blue.</p>
+
+            <p>This reduces the total number of possible colors to around 4,000. But browsers will interpret <code>#FF0000</code>
+                and <code>#F00</code> as exactly the same color.</p>
         </section>
         <section class="sublesson" id="UseRGBvaluestoColorElements">
             <h3>Use RGB values to Color Elements</h3>
+            <p>Another way you can represent colors in CSS is by using <code>RGB</code> values.</p>
+
+            <p>
+                The RGB value for black looks like this:<br>
+                <code>
+                    rgb(0, 0, 0)
+                </code>
+            </p>
+
+            <p>
+                The RGB value for white looks like this:<br>
+                <code>
+                    rgb(255, 255, 255)
+                </code>
+            </p>
+
+            <p>Instead of using six hexadecimal digits like you do with hex code, with <code>RGB</code> you specify the
+                brightness of each color with a number between 0 and 255.</p>
+
+            <p>If you do the math, the two digits for one color equal 16 times 16, which gives us 256 total values. So
+                <code>RGB</code>, which starts counting from zero, has the exact same number of possible values as hex
+                code.</p>
+
+            <p>Here's an example of how you'd change the body background to orange using its RGB code.<br>
+                <code>
+                    body {<br>
+                    &emsp;&emsp;background-color: rgb(255, 165, 0);<br>
+                    }
+                </code>
+            </p>
         </section>
         <section class="sublesson" id="UseRGBtoMixColors">
             <h3>Use RGB to Mix Colors</h3>
+            <p>Just like with hex code, you can mix colors in RGB by using combinations of different values.</p>
         </section>
         <section class="sublesson" id="UseCSSVariablestochangeseveralelementsatonce">
             <h3>Use CSS Variables to change several elements at once</h3>
+            <p>CSS Variables are a powerful way to change many CSS style properties at once by changing only one value.</p>
         </section>
         <section class="sublesson" id="CreateacustomCSSVariable">
             <h3>Create a custom CSS Variable</h3>
+            <p>
+                To create a CSS Variable, you just need to give it a <code>name</code> with <code>two dashes</code> in
+                front of it and assign it a <code>value</code> like this:
+                <code>
+                    --penguin-skin: gray;
+                </code>
+            </p>
+            <p>This will create a variable named <code>--penguin-skin</code> and assign it the value of <code>gray</code>.</p>
+
+            <p>Now you can use that variable elsewhere in your CSS to change the value of other elements to gray.</p>
         </section>
         <section class="sublesson" id="UseacustomCSSVariable">
             <h3>Use a custom CSS Variable</h3>
+            <p>
+                After you create your variable, you can assign its value to other CSS properties by referencing the
+                name you gave it.<br>
+                <code>
+                    background: var(--penguin-skin);
+
+                </code>
+            </p>
+            <p>This will change the background of whatever element you are targeting to gray because that is the value
+                of the <code>--penguin-skin</code> variable.</p>
+
+            <p>Note that styles will not be applied unless the variable names are an exact match.</p>
         </section>
         <section class="sublesson" id="AttachaFallbackvaluetoaCSSVariable">
             <h3>Attach a Fallback value to a CSS Variable</h3>
+            <p>When using your variable as a CSS property value, you can attach a fallback value that your page will
+                revert to if for some reason it can't get your variable to work.</p>
+            <p>
+                It could be that someone is using an older browser that hasn't yet adopted CSS Variables, or perhaps
+                their device doesn't support the value you gave the variable. Here's how you do it:<br>
+                <code>
+                    background: var(--penguin-skin, black);
+                </code>
+            </p>
+            <p>This will set background to black if there is a problem with your variable.</p>
+            <p>Note that this can be useful for debugging.</p>
         </section>
         <section class="sublesson" id="CascadingCSSvariables">
             <h3>Cascading CSS variables</h3>
+            <p>When you create a variable, it becomes available for you to use inside the element in which you create
+                it. It also becomes available within any elements nested within it. This effect is known as <i>cascading</i>.</p>
+
+            <p>Because of cascading, CSS variables are often defined in the <i>:root</i> element.</p>
+
+            <p>You can think of the <code>:root</code> element as a container for your entire HTML document, in the
+                same way that an <code>html</code> element is a container for the <code>body</code> element.</p>
+
+            <p>By creating your variables in <code>:root</code>, they will be available throughout the whole web page.</p>
         </section>
         <section class="sublesson" id="Changeavariableforaspecificarea">
             <h3>Change a variable for a specific area</h3>
+            <p>When you create your variables in <code>:root</code> they will set the value of that variable for the
+                whole page.</p>
+
+            <p>You can then over-write these variables by setting them again within a specific element.</p>
         </section>
         <section class="sublesson" id="Useamediaquerytochangeavariable">
             <h3>Use a media query to change a variable</h3>
+            <p>CSS Variables can simplify the way you use media queries.</p>
+
+            <p>For instance, when your screen is smaller or larger than your media query break point, you can change
+                the value of a variable, and it will apply its style wherever it is used.</p>
         </section>
 
     </article>

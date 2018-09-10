@@ -4,6 +4,9 @@
 
 body{
     font-family: "Quattrocento Sans";
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
 }
 code{
     color: darkred;
@@ -12,8 +15,9 @@ code{
 }
 .sublesson{
     border-color: black;
-    border-width: 1.5px;
+    border-width: .75px;
     border-style: solid;
+    margin-top: 2px;
 }
 h3{
     font-family: "Karla";
